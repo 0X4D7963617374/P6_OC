@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>Fisheye - photographe</title>
 </head>
 <body>
@@ -12,11 +13,24 @@
         <img src="assets/images/logo.png" class="logo" alt="fisheye logo"/>
     </header>
     <main id="main">
-        <div class="photograph-header">
-            <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
+        <div class="photograph-header-photographer">
+            <div class="photographer-details-photographer"></div>
+            <button class="contact-button-photographer" onclick="displayModal()">Contactez-moi</button>
+            <img src="" alt="Photographer Portrait" class="photographer-portrait-photographer"/>
         </div>
-        <div class="photographer_details"></div>
-        <div class="media_section"></div>
+        <div class="sort-section-photographer">
+            <label for="sort-photographer">Trier par</label>
+            <div class="select-container">
+                <select id="sort-photographer">
+                    <option value="popularity">Popularité</option>
+                    <option value="date">Date</option>
+                    <option value="title">Titre</option>
+                </select>
+                <i class="fas fa-chevron-down"></i>
+                <i class="fas fa-chevron-up"></i>
+            </div>
+        </div>
+        <div class="media-section-photographer"></div>
     </main>
     <div id="contact_modal">
         <div class="modal">
@@ -29,7 +43,7 @@
                     <label>Prénom</label>
                     <input />
                 </div>
-                <button class="contact_button">Envoyer</button>
+                <button class="contact-button-photographer">Envoyer</button>
             </form>
         </div>
     </div>
