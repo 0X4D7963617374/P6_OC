@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <meta charset="utf-8">
@@ -8,15 +9,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>Fisheye - photographe</title>
 </head>
+
 <body>
     <header>
-        <img src="assets/images/logo.png" class="logo" alt="fisheye logo"/>
+        <img src="assets/images/logo.png" class="logo" alt="fisheye logo" />
     </header>
     <main id="main">
         <div class="photograph-header-photographer">
             <div class="photographer-details-photographer"></div>
             <button class="contact-button-photographer" onclick="displayModal()">Contactez-moi</button>
-            <img src="" alt="Photographer Portrait" class="photographer-portrait-photographer"/>
+            <img src="" alt="Photographer Portrait" class="photographer-portrait-photographer" />
         </div>
         <div class="sort-section-photographer">
             <label for="sort-photographer">Trier par</label>
@@ -35,19 +37,41 @@
     <div id="contact_modal">
         <div class="modal">
             <header>
-                <h2>Contactez-moi</h2>
+                <h2>Contactez-moi <span id="photographer-name"></span></h2>
                 <img src="assets/icons/close.svg" onclick="closeModal()" />
             </header>
             <form>
                 <div>
                     <label>Prénom</label>
                     <input />
+                    <label>Nom</label>
+                    <input />
+                    <label>Email</label>
+                    <input />
+                    <label>Votre message</label>
+                    <textarea></textarea>
                 </div>
                 <button class="contact-button-photographer">Envoyer</button>
             </form>
         </div>
     </div>
+    <div id="info-box">
+        <span id="total-likes">0 <i class="fas fa-heart"></i></span>
+        <span id="daily-rate">400€/jour</span>
+    </div>
+    <div id="media_modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" onclick="closeMediaModal()">&times;</span>
+            <span class="chevron chevron-left" onclick="navigateMedia('prev')">&lsaquo;</span>
+            <span class="chevron chevron-right" onclick="navigateMedia('next')">&rsaquo;</span>
+            <div class="media-container">
+                <img id="media_modal_image" style="display: none;">
+                <video id="media_modal_video" controls style="display: none;"></video>
+            </div>
+        </div>
+    </div>
     <script src="scripts/utils/contactForm.js"></script>
     <script src="scripts/pages/photographer.js"></script>
 </body>
+
 </html>
